@@ -8,6 +8,8 @@ require 'rspec/rails'
 require 'shoulda-matchers'
 require 'capybara/rspec'
 
+
+
 Shoulda::Matchers.configure do |config|
   config.integrate do |with|
     with.test_framework :rspec
@@ -60,7 +62,7 @@ RSpec.configure do |config|
   #     RSpec.describe UsersController, type: :controller do
   #       # ...
   #     end
-  #
+  config.include FactoryBot::Syntax::Methods
   # The different available types are documented in the features, such as in
   # https://rspec.info/features/6-0/rspec-rails
   config.infer_spec_type_from_file_location!
